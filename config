@@ -1,0 +1,12 @@
+DEBIAN="buster"
+ISO="debian-$DEBIAN-`date '+%Y-%m-%d-%H:%M'`.iso"
+#linux-image-amd64/stable linux-image-amd64/buster-backports
+PKG="linux-image-amd64/$DEBIAN-backports docker docker-compose debocker apt-transport-https ca-certificates curl gnupg2 software-properties-common grub-efi-amd64 efibootmgr dhcpcd5 parted gdisk lz4 openssh-server net-tools htop"
+BIOS_Legacy="1"
+BIOS_UEFI="1"
+#BIOS_UEFI32="1"
+ROOT="$DIRSTACK/root" # Папка для установки системы
+ROOT_ISO="$DIRSTACK/iso" # Папка для монтирования образа
+SIZE_ISO="106" # Запас по размеру образа в %
+CACHE_DIR="$DIRSTACK/debootstrap" # Кеш с пакетами
+DOCKER_DIR=""
