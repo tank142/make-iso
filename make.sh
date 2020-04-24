@@ -75,8 +75,8 @@ RUN "\033[1;36m\033[2mMount chroot \033[0m" CHROOT_SETUP "$ROOT"
 RUN "\033[1;36m\033[2mSynchronizing package databases \033[0m" chroot "$ROOT" "apt" "update"
 RUN "\033[1;36m\033[2mInstalling \033[0m\033[1m\033[1;36m$PKG\033[2m \033[0m" chroot "$ROOT" "apt" "install" $PKG "--assume-yes"
 RUN "\033[1;36m\033[2mCopy customization files \033[0m" cp -r -a "$DIRSTACK"/customization/* "$ROOT"/
-systemctl stop docker
 if [[ "$DOCKER_DIR" != '' ]];then
+	systemctl stop docker
 	UMOUNT "$DOCKER_DIR"
 	RUN "\033[1;36m\033[2mCopy docker files \033[0m" cp -r -a "$DOCKER_DIR" "$ROOT"/var/lib/docker
 	RUN "\033[1;36m\033[2mCopy docker-compose files \033[0m" cp -r -a /opt/docker "$ROOT"/opt/docker
