@@ -1,0 +1,16 @@
+[Unit]
+Description=Starting setup
+After=systemd-user-sessions.service plymouth-quit-wait.service
+After=getty@tty1.service
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/start.sh
+StandardInput=tty
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+
+[Install]
+WantedBy=getty.target
+DefaultInstance=tty1

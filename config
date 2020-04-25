@@ -1,0 +1,10 @@
+ISO="arch-linux-`date '+%Y-%m-%d-%H:%M'`.iso"
+PKG="base linux-lts efibootmgr parted gdisk lz4 net-tools"
+BIOS_Legacy="1"
+BIOS_UEFI="1"
+#BIOS_UEFI32="1"
+ROOT="$DIRSTACK/root" # Папка для установки системы
+ROOT_ISO="$DIRSTACK/iso" # Папка для монтирования образа
+SIZE_ISO="120" # Запас по размеру образа в %
+CACHE_DIR="$DIRSTACK/pkg" # Кеш с пакетами
+DOCKER_DIR=""
