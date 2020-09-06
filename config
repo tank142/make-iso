@@ -7,6 +7,6 @@ BIOS_UEFI="1"
 #BIOS_UEFI32="1"
 ROOT="$DIRSTACK/root" # Папка для установки системы
 ROOT_ISO="$DIRSTACK/iso" # Папка для монтирования образа
-SIZE_ISO="106" # Запас по размеру образа в %
+SIZE_ISO="120" # Запас по размеру образа в %
 CACHE_DIR="$DIRSTACK/debootstrap" # Кеш с пакетами
 DOCKER_DIR=""
