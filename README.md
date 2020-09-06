@@ -1,4 +1,4 @@
-
+![Image alt](https://github.com/tank142/make-iso/raw/debian/screenshot2.png)
 ![Image alt](https://github.com/tank142/make-iso/raw/debian/screenshot.png)
 # make.sh
 Собирает образы iso и vdi ( при указании ключа -vdi ). Файлы из папки customization копируются в образ после установки. Файл config содержит большое количество настроек.
